@@ -1,0 +1,230 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "nemo helper",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ActOneTwoThree",
+          "slots": [
+            {
+              "name": "act",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Im starting act {act}",
+            "I am starting act {act}",
+            "starting act {act}",
+            "restarting act {act}",
+            "act {act} begins"
+          ]
+        },
+        {
+          "name": "ReachedFortyFourNote",
+          "slots": [
+            {
+              "name": "note",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "I have reached {note} notoriety",
+            "current notoriety is {note}",
+            "notoriety is now {note}",
+            "i have {note} notoriety"
+          ]
+        },
+        {
+          "name": "AttackingAShip",
+          "slots": [],
+          "samples": [
+            "i'm attacking that battle ship",
+            "i'm attacking this freighter",
+            "i'm attacking this battle ship",
+            "i'm attacking that ship",
+            "i'm attacking this ship",
+            "I'm attacking a ship",
+            "attacking this ship",
+            "attacking a ship",
+            "attacking the ship"
+          ]
+        },
+        {
+          "name": "ShipAttackingMe",
+          "slots": [],
+          "samples": [
+            "ship is attacking me",
+            "this ship is attacking me",
+            "this ship is attacking"
+          ]
+        },
+        {
+          "name": "MyShipTookDamage",
+          "slots": [],
+          "samples": [
+            "my ship took damage",
+            "my ship took some damage",
+            "my ship was hit",
+            "i failed the combat"
+          ]
+        },
+        {
+          "name": "StalkAttack",
+          "slots": [],
+          "samples": [
+            "trying a stalk attack",
+            "i'm stock attacking",
+            "starting a stock attack",
+            "performing a stock attack",
+            "performing a stalk attack",
+            "starting stalk attack",
+            "im stalk attacking",
+            "attacking using stalk",
+            "i am attacking with stalk"
+          ]
+        },
+        {
+          "name": "BoldAttack",
+          "slots": [],
+          "samples": [
+            "trying a bold attack",
+            "performing a bold attack",
+            "starting bold attack",
+            "i'm bold attacking",
+            "attacking using bold",
+            "i am attacking with bold",
+            "continuing my bold attack"
+          ]
+        },
+        {
+          "name": "PlacementPhase",
+          "slots": [],
+          "samples": [
+            "starting the placement phase",
+            "placement phase is starting",
+            "time for the placement phase",
+            "starting my placement phase"
+          ]
+        },
+        {
+          "name": "DiceRoll",
+          "slots": [
+            {
+              "name": "dice",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "roll {dice} dice"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "SoundEffects",
+          "slots": [
+            {
+              "name": "enable",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "samples": [
+            "turn sound effects {enable}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ReachedFortyFourNote",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "note",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1495834101357.218127101163"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ActOneTwoThree",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "act",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.718416577021.1214681182806"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.718416577021.1214681182806",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which act is this. One, two or three"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1495834101357.218127101163",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what is your current notoriety"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.370691590725.421145734035",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what action type are you doing"
+          }
+        ]
+      }
+    ]
+  }
+}
